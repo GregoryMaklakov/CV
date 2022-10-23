@@ -40,8 +40,43 @@ ul li {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: #152A41;
+
+    /* Код анимации взял из CODEOPEN >
+    https://codepen.io/menian/pen/oBoNWQ */
+
+    background: -moz-linear-gradient(left,  #152A41 40%, #5a7189 51%, #152A41 64%, #152A41 64%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #152A41 40%,#5a7189 51%,#152A41 64%,#152A41 64%); 
+    background-size: 400% 400%;
+
+    -webkit-animation: background-animation 4s ease-in-out infinite;
+    -moz-animation: background-animation 4s ease-in-out infinite;
+    -o-animation: background-animation 4s ease-in-out infinite;
+    animation: background-animation 4s ease-in-out infinite;  
+    
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent; 
 }
+@-webkit-keyframes background-animation {
+    0%{background-position: 100%}
+    100%{background-position: 0%}
+}
+@-moz-keyframes background-animation {
+    0%{background-position:0% 30%}
+    50%{background-position:100% 71%}
+    100%{background-position:0% 30%}
+}
+@-o-keyframes background-animation {
+    0%{background-position:0% 30%}
+    50%{background-position:100% 71%}
+    100%{background-position:0% 30%}
+}
+@keyframes background-animation { 
+    0%{background-position: 100%}
+    100%{background-position: 0%}
+}
+
+/* //============================================ */
+
 .header-subtitle {
     margin-top: 5px;
     font-weight: 300;
